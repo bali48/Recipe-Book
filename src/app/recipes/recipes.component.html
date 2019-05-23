@@ -3,6 +3,12 @@
     <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-md-7">
-    <app-recipe-detail></app-recipe-detail>
+<!--    {{DetailRecipe|json}}-->
+    <app-recipe-detail [element]="DetailRecipe" *ngIf="DetailRecipe; else defualt_message">
+
+    </app-recipe-detail>
+    <ng-template #defualt_message>
+      please Select the recipe
+    </ng-template>
   </div>
 </div>

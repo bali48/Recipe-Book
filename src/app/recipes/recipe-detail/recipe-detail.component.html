@@ -1,16 +1,16 @@
 <div class="row">
   <div class="col-xs-12">
-    <img src="" alt="" class="img-responsive">
+    <img [src]=element.imagePath alt="" class="img-responsive" width="50px" height="50px">
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h1>Recipe Name</h1>
+    <h1 appStyledirective>{{element.name}}</h1>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <div class="btn-group">
+    <div class="btn-group" appDropdowndirective>
       <button
         type="button"
         class="btn btn-primary dropdown-toggle">
@@ -26,7 +26,7 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    Description
+    {{element.description}}
   </div>
 </div>
 <div class="row">
