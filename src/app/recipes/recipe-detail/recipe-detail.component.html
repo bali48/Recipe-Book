@@ -5,23 +5,22 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <h1 appStyledirective>{{element.name}}</h1>
+    <h1 >{{element.name}}</h1>
   </div>
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <div class="btn-group" appDropdowndirective>
-      <button
-        type="button"
-        class="btn btn-primary dropdown-toggle">
+    <div class="dropdown">
+      <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
         Manage Recipe <span class="caret"></span>
       </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">To Shopping List</a></li>
-        <li><a href="#">Edit Recipe</a></li>
-        <li><a href="#">Delete Recipe</a></li>
-      </ul>
+      <div class="dropdown-menu">
+        <li><a [ngStyle]="{cursor:'pointer'}" (click)="AddIngredientToShoppingList()">To Shopping List</a></li>
+        <li><a [ngStyle]="{cursor:'pointer'}">Edit Recipe</a></li>
+        <li><a [ngStyle]="{cursor:'pointer'}">Delete Recipe</a></li>
+      </div>
     </div>
+
   </div>
 </div>
 <div class="row">
@@ -31,6 +30,11 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    Ingredients
+    <ul class="list-group">
+            <li  class="list-group-item"
+              *ngFor="let ingredient of element.ingredients">
+        {{ ingredient.name }} - {{ ingredient.amount }}
+      </li>
+    </ul>
   </div>
 </div>

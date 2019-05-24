@@ -4,7 +4,7 @@
   </div>
   <div class="col-md-7">
 <!--    {{DetailRecipe|json}}-->
-    <app-recipe-detail [element]="DetailRecipe" *ngIf="DetailRecipe; else defualt_message">
+    <app-recipe-detail *ngIf="DetailRecipe; else defualt_message" [element]="DetailRecipe">
 
     </app-recipe-detail>
     <ng-template #defualt_message>
