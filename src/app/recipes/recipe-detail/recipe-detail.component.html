@@ -1,6 +1,7 @@
 <div class="row">
+<!--  {{element}}-->
   <div class="col-xs-12">
-    <img [src]=element.imagePath alt="" class="img-responsive" width="50px" height="50px">
+    <img [src]=element.imagePath alt="" class="img-responsive" width="250px" height="250px">
   </div>
 </div>
 <div class="row">
@@ -16,7 +17,7 @@
       </button>
       <div class="dropdown-menu">
         <li><a [ngStyle]="{cursor:'pointer'}" (click)="AddIngredientToShoppingList()">To Shopping List</a></li>
-        <li><a [ngStyle]="{cursor:'pointer'}">Edit Recipe</a></li>
+        <li><a [ngStyle]="{cursor:'pointer'}" routerLink="/">Edit Recipe</a></li>
         <li><a [ngStyle]="{cursor:'pointer'}">Delete Recipe</a></li>
       </div>
     </div>

@@ -4,11 +4,10 @@
   </div>
   <div class="col-md-7">
 <!--    {{DetailRecipe|json}}-->
-    <app-recipe-detail *ngIf="DetailRecipe; else defualt_message" [element]="DetailRecipe">
+<!--    <app-recipe-detail *ngIf="DetailRecipe; else defualt_message" [element]="DetailRecipe">-->
 
-    </app-recipe-detail>
-    <ng-template #defualt_message>
-      please Select the recipe
-    </ng-template>
+<!--    </app-recipe-detail>-->
+      <router-outlet></router-outlet>
+
   </div>
 </div>

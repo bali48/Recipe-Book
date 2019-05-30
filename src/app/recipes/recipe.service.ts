@@ -12,7 +12,7 @@ export class RecipeService{
         new Ingredient('Chicken',15),
         new Ingredient('Rice',6)
     ]),
-    new Recipe('Salid', 'This is simply a test', 'https://upload.wikimedia.org/wikipedia/commons/1/15/Recipe_logo.jpeg',[
+    new Recipe('Salad', 'This is simply a test', 'https://cdn-image.foodandwine.com/sites/default/files/styles/medium_2x/public/201010-xl-big-italian-salad.jpg?itok=1zvxLIZ7',[
       new Ingredient('Chicken',15),
       new Ingredient('Rice',6)
     ])
@@ -24,7 +24,8 @@ export class RecipeService{
     return this.recipes;
   }
 
-  viewRecipeDetail(){
+  getRecipeByID(id: number){
+    return this.recipes[id];
 
   }
 }

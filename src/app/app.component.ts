@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   selection = 'Recipes';
   atNavigation(selection : string){
+
     this.selection = selection;
   }
 }
